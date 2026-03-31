@@ -1,2 +1,2 @@
 # RNAseq-in-Bash
-Automatic Pipeline from download to bam files
+Automatic Pipeline from SRA download to bam files
