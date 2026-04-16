@@ -158,36 +158,7 @@ res.df <- TCGA_COAD_DEG_tumorvsnormal
 str(res.df)
 EnhancedVolcano(res.df, x= "log2FoldChange", y="padj", lab= res.df$symbol)
 
-############### CPTAC ########## 
 
-# get a list of projects
-gdcprojects <- getGDCprojects()
-getProjectSummary('TCGA-COAD')
-
-summary(gdcprojects)
-
-# building a query
-query_TCGA <- GDCquery(project = 'TCGA-COAD',
-                       data.category = 'Transcriptome Profiling')
-output_query_TCGA <- getResults(query_TCGA)
-
-
-# build a query to retrieve gene expression data ------------
-query_TCGA <- GDCquery(project = 'TCGA-COAD',
-                       data.category = 'Transcriptome Profiling',
-                       experimental.strategy = 'RNA-Seq',
-                       workflow.type = 'STAR - Counts',
-                       access = 'open')
-
-getResults(query_TCGA)
-
-# download data - GDCdownload
-GDCdownload(query_TCGA)
-
-
-# prepare data
-tcga_coad_data <- GDCprepare(query_TCGA, summarizedExperiment = TRUE)
-coad_matrix <- assay(tcga_coad_data, 'unstranded')
 
 
 
