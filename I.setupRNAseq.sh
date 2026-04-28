@@ -2,8 +2,8 @@
 set -euo pipefail
 
 echo "    This is a script to perform automatically the"
-echo "    INSTALLING MINICONDA + RNA-SEQ ENV by Alvaro Huamani Ortiz        "
-echo "    Version 1.0, December 2nd 2025, 6 steps ~~discoverthevibes~~"
+echo "    INSTALLING MINICONDA + RNA-SEQ ENV by Alvaro Huamani Ortiz      "
+echo "    Version 1.0, December 2nd 2025, 6 steps"
 
 # -----------------------------
 # 1. DOWNLOAD AND INSTALL MINICONDA
